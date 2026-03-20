@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "author": "Vaibhav Parashari",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 100,
+      "left": 200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": 40,
+      "left": 0,
+      "attrs": { "label": "Strain Gauge (Bridge Output)" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot2",
+      "top": 160,
+      "left": 0,
+      "attrs": { "label": "Offset Trim" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 280,
+      "left": 20,
+      "attrs": { "color": "red", "label": "Alarm" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 280,
+      "left": 100,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    ["pot1:SIG", "esp:34", "green", []],
+    ["pot1:VCC", "esp:3V3", "red", []],
+    ["pot1:GND", "esp:GND.1", "black", []],
+    ["pot2:SIG", "esp:35", "blue", []],
+    ["pot2:VCC", "esp:3V3", "red", []],
+    ["pot2:GND", "esp:GND.1", "black", []],
+    ["esp:2", "r1:1", "orange", []],
+    ["r1:2", "led1:A", "orange", []],
+    ["led1:C", "esp:GND.2", "black", []]
+  ],
+  "dependencies": {}
+}

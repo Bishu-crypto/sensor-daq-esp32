@@ -1,0 +1,8 @@
+*.pyc
+__pycache__/
+*.csv
+*.log
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
