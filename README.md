@@ -4,7 +4,7 @@
 
 > Real-time sensor data acquisition, web dashboard visualization, and strain gauge signal conditioning — built on ESP32.
 
----
+
 
 ## Projects in This Repo
 
@@ -48,6 +48,19 @@ Microstrain: µε = (4 × ΔV) / (G × GF × Vex) × 10⁶
 | MQ-2 | Gas / Smoke (ADC raw) | GPIO36 |
 | IR Obstacle | Proximity (digital) | GPIO19 |
 | Soil Moisture | Moisture level (ADC raw) | GPIO39 |
+
+## Live Demo
+
+![Dashboard](docs/images/dashboard.jpeg)
+
+## Hardware Setup
+| Sensor | Photo |
+|---|---|
+| DHT11 | ![DHT11](docs/images/dht11.jpeg) |
+| LDR | ![LDR](docs/images/ldr.jpeg) |
+| Sound Sensor | ![Sound](docs/images/sound_sensor.jpeg) |
+| IR Sensor | ![IR](docs/images/ir_sensor.jpeg) |
+| Vibration | ![Vibration](docs/images/vibration.jpeg) |
 
 # Quick Start
 1. Open `firmware/multi_sensor_dashboard/multi_sensor_dashboard.ino`
